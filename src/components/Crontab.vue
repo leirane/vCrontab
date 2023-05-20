@@ -363,7 +363,7 @@ export default {
   },
 };
 </script>
-<style scoped>
+<style scoped lang="scss">
 .pop_btn {
   text-align: center;
   margin-top: 20px;

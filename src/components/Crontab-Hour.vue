@@ -43,7 +43,7 @@ export default {
 			average01: 0,
 			average02: 1,
 			checkboxList: [],
-			checkNum: this.$options.propsData.check
+			checkNum: this.$props.check
 		}
 	},
 	name: 'crontab-hour',

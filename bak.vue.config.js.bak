@@ -1,5 +1,5 @@
 module.exports = {
-    baseUrl: './',
+    publicPath: './',
     filenameHashing: false,
     productionSourceMap: false,
     css: {
@@ -8,7 +8,7 @@ module.exports = {
     pages: {
         index: {
             entry: 'demo/main.js',
-            template: 'public/index.html',
+            template: 'index.html',
             filename: 'index.html'
         }
     }

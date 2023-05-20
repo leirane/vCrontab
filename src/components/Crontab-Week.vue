@@ -59,7 +59,7 @@ export default {
 			average02: 1,
 			checkboxList: [],
 			weekList: ['周一', '周二', '周三', '周四', '周五', '周六', '周日'],
-			checkNum: this.$options.propsData.check
+			checkNum: this.$props.check
 		}
 	},
 	name: 'crontab-week',

@@ -1,14 +1,14 @@
 <template>
   <div id="app">
     <div class="box">
-      <el-input v-model="input"  class="inp"></el-input>
+      <el-input v-model="input" class="inp"></el-input>
       <el-button type="primary" @click="showDialog">生成 cron</el-button>
     </div>
     <el-dialog title="生成 cron" v-model="showCron">
       <vcrontab
-        @hide="showCron=false"
-        @fill="crontabFill"
-        :expression="expression"
+          @hide="showCron=false"
+          @fill="crontabFill"
+          :expression="expression"
       ></vcrontab>
     </el-dialog>
   </div>
@@ -16,8 +16,9 @@
 
 <script>
 import vcrontab from "../src/components/Crontab.vue";
+
 export default {
-  components: { vcrontab },
+  components: {vcrontab},
   data() {
     return {
       input: "",
@@ -39,12 +40,13 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .box {
   width: 500px;
   height: 100px;
   margin: 150px auto 0;
 }
+
 .inp {
   width: 300px !important;
   margin-right: 20px;

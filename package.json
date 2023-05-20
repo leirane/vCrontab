@@ -1,10 +1,21 @@
 {
-  "name": "vcrontab",
-  "version": "0.3.5",
+  "name": "vcrontab-3",
+  "version": "3.3.22",
+  "type": "module",
   "description": "vue 的 cron 组件，支持解析/反解析 cron 表达式，生成最近五次的符合条件时间",
   "author": "smallstone",
   "license": "MIT",
-  "main": "lib/vcrontab.umd.min.js",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/vcrontab.umd.cjs",
+  "module": "./dist/vcrontab.umd.cjs",
+  "exports": {
+    ".": {
+      "import": "./dist/vcrontab.umd.cjs",
+      "require": "./dist/vcrontab.umd.cjs"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git@github.com:small-stone/vue-crontab.git"
@@ -18,17 +29,20 @@
     "vue-crontab"
   ],
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "serve": "vite --host",
+    "build": "vite build",
     "lib": "vue-cli-service build --target lib --name vcrontab --dest lib src/index.js"
   },
   "dependencies": {
-    "element-ui": "^2.4.11",
-    "vue": "^2.5.17"
+    "@element-plus/icons-vue": "^2.0.9",
+    "element-plus": "^2.3.4",
+    "vue": "^3.2.31"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.0.0",
-    "@vue/cli-service": "^3.0.0",
-    "vue-template-compiler": "^2.5.17"
+    "@vitejs/plugin-vue": "^4.1.0",
+    "@vue/compiler-sfc": "^3.0.5",
+    "postcss-preset-env": "^8.4.1",
+    "sass": "^1.37.5",
+    "vite": "^4.3.2"
   }
 }
